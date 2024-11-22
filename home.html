@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>Venice</title>
+    <!-- Linking an external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS styles -->
+    <style>
+        /* Importing a Google font */
+        @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+        
+        /* Styles for the body */
+        body {
+            background-color: #FFCCCB; /* Background color */
+            margin: 0; /* Resetting margin */
+            padding: 0; /* Resetting padding */
+        }
+        
+        /* Styles for the header */
+        header {
+            background-color: white; /* Background color */
+            text-align: center; /* Center align text */
+            padding: 20px 0; /* Padding top and bottom */
+        }
+
+        /* Styles for the main heading */
+        h1 {
+            font-family: 'Reenie Beanie', cursive; /* Font family */
+            font-size: 266px; /* Font size */
+            color:black; /* Font color */
+            margin: 0; /* Resetting margin */
+        }
+        
+        /* Styles for subheadings */
+        h2 {
+            font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'; /* Font family */
+            font-size: 34px; /* Font size */
+            margin-top:10px; /* Top margin */
+            color: black; /* Font color */
+        }
+		
+		h3 {
+            font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif';
+            font-size: 34px;
+            color: ;
+            margin-top:10px;
+            background-color: green;
+        }
+
+        /* Styles for specific elements */
+        .main-container {
+            background-color: #; /* Background color */
+            padding: 20px; /* Padding */
+            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif"; /* Font family */
+        }
+
+        .column {
+            display: flex; /* Flexbox display */
+            align-items: center; /* Align items vertically */
+            gap: 20px; /* Gap between items */
+        }
+
+        .column img {
+            width: 500px; /* Image width */
+            height: auto; /* Auto height */
+            margin-top: 20px; /* Top margin */
+        }
+
+        .column h2,
+        .column p {
+            margin: 1; /* Resetting margin */
+        }
+
+        .italian-header {
+            /* Header styling */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px; /* Header height */
+            display: flex; /* Flexbox display */
+            justify-content: center; /* Center align content horizontally */
+            align-items: center; /* Center align content vertically */
+            color: white; /* Font color */
+            text-align: center; /* Center align text */
+            font-size: 24px; /* Font size */
+            font-weight: bold; /* Font weight */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow */
+        }
+
+        /* Styles for buttons */
+        .button {
+			font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'; /* Font family */
+            background-color: red; /* Background color */
+            border: none; /* No border */
+            color: white; /* Font color */
+            padding: 15px 25px; /* Padding */
+            text-align: center; /* Center align text */
+            text-decoration: none; /* No text decoration */
+            display: inline-block; /* Inline block display */
+            font-size: 24px; /* Font size */
+            border-radius: 10px; /* Border radius */
+            cursor: pointer; /* Cursor style */
+            transition: background-color 0.3s ease; /* Transition effect */
+            margin: 10px; /* Margin */
+        }
+
+        /* Hover effect for buttons */
+        .button:hover {
+            background-color: green; /* Background color */
+        }
+
+        /* Active state for buttons */
+        .button:active {
+            background-color: white; /* Background color */
+            color: black; /* Font color */
+        }
+
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 600px) {
+            /* Styles for screens smaller than 600px */
+            .column {
+                flex-direction: column; /* Flex direction column */
+                align-items: flex-start; /* Align items to the start */
+            }
+            .column img {
+                width: 100%; /* Image width 100% */
+            }
+            h1 {
+                font-size: 72px; /* Font size */
+            }
+            h2 {
+                font-size: 24px; /* Font size */
+            }
+            .button {
+                padding: 10px 20px; /* Padding */
+            }
+        }
+
+        
+        /* Styles for the footer */
+        footer {
+            background-color: green; /* Background color */
+            color: white; /* Font color */
+            padding: 20px; /* Padding */
+            text-align: center; /* Center align text */
+        }
+		
+		/* Dropdown menu styles */
+        .dropdown {
+            position: relative; /* Relative positioning */
+            display: inline-block; /* Inline block display */
+        }
+  
+        .dropdown-content {
+			font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'; /* Font family */
+            display: none; /* Initially hidden */
+            position: absolute; /* Absolute positioning */
+            background-color: rgba(206,43,55,255); /* Background color */
+            min-width: 120px; /* Minimum width */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Box shadow */
+            z-index: 1; /* Z-index */
+            right: 5; /* Position to the right */
+            left: auto; /* Override any default left positioning */
+            color: white; /* Font color */
+       }
+  
+        .dropdown-content a {
+            color: white; /* Font color */
+            padding: 12px 16px; /* Padding */
+            text-decoration: none; /* No text decoration */
+            display: block; /* Block display */
+       }
+  
+        .dropdown-content a:hover {
+            background-color: green; /* Background color on hover */
+       }
+  
+        .dropdown:hover .dropdown-content {
+            display: block; /* Display on hover */
+       }
+		
+		h4 {
+			color: black; /* Font color */
+			font-size: 50px; /* Font size */
+			
+		}
+    </style>
+</head>
+	    
+<body>
+    <!-- Header section -->
+    <header class="italian-header">
+        <!-- Main heading -->
+        <h1>Venice</h1>
+        <!-- Dropdown menu -->
+        <div>
+            <h4 style="text-align: right;">
+                <!-- Dropdown container -->
+                <div class="dropdown">
+                    <!-- Menu icon -->
+                    <span>&#9776;</span>
+                    <!-- Dropdown content -->
+                    <div class="dropdown-content">
+                        <a href="home.html">Visit</a>
+						<a href="details.html">Eat</a>
+                        <a href="more.html">Stay</a>
+                    </div>
+                </div>
+            </h4>
+        </div>
+    </header>
+	
+    <!-- Navigation buttons -->
+    <button class="button"><a href="home.html">Places to Visit</a></button>
+    <button class="button"><a href="details.html">Places to Eat</a></button>
+    <button class="button"><a href="more.html">Places to Stay</a></button>
+		
+
+	
+    <!-- Subheading section -->
+    <header>
+        <h3>Best Places to Visit</h3>
+    </header>
+    
+    <!-- Main content container -->
+    <div class="main-container">
+        <!-- Columns for content -->
+        <div class="column">
+            <!-- Image for the first place -->
+            <img src="Images\Rialto Bridge.webp" alt="Rialto Bridge">
+            <!-- Description for the first place -->
+            <div>
+                <h2>Rialto Bridge</h2>
+                <p>One of Venice's most iconic landmarks, the Rialto Bridge is a symbol of the city's grandeur and architectural prowess. Spanning the bustling waters of the Grand Canal, this majestic bridge has stood for centuries, connecting the lively districts of San Polo and San Marco. Visitors can stroll across its arched expanse, soak in panoramic views of the canal, and explore the vibrant market stalls that cluster around its base.</p>
+            </div>
+        </div>
+        <div class="column">
+            <!-- Image for the second place -->
+            <img src="Images\St Mark's Square.jpg" alt="Piazza San Marco">
+            <!-- Description for the second place -->
+            <div>
+                <h2>Piazza San Marco</h2>
+                <p>Known as the "Drawing Room of Europe," Piazza San Marco is the beating heart of Venice's social and cultural life. Surrounded by magnificent architectural marvels like St. Mark's Basilica and the Doge's Palace, this expansive square exudes grandeur and charm. Visitors can enjoy leisurely strolls, sip coffee at historic cafes, listen to live music, or simply bask in the beauty of their surroundings while pigeons flutter overhead.</p>
+            </div>
+        </div>
+        <div class="column">
+            <!-- Image for the third place -->
+            <img src="Images\Murano.webp" alt="Murano">
+            <!-- Description for the third place -->
+            <div>
+                <h2>Murano</h2>
+                <p>Nestled in the Venetian Lagoon, Murano is a charming island renowned for its centuries-old glassmaking heritage. Visitors can explore its quaint streets, witness artisans crafting intricate glass pieces, and admire the vibrant colors and delicate designs that have made Murano glass famous worldwide.</p>
+            </div>
+        </div>
+        <div class="column">
+            <!-- Image for the fourth place -->
+            <img src="Images\Grand Canal.webp" alt="The Grand Canal">
+            <!-- Description for the fourth place -->
+            <div>
+                <h2>The Grand Canal</h2>
+                <p>Often referred to as the "Main Street" of Venice, the Grand Canal is a captivating waterway that winds its way through the heart of the city. Lined with elegant palaces, historic buildings, and bustling waterfront activity, a leisurely ride along the Grand Canal offers a unique perspective of Venice's rich history and architectural splendor.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer section -->
+    <footer style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg'); background-size: cover; color: white; padding: 20px; text-align: center;">
+        <!-- Footer content -->
+        <h2>Enjoy Venice!</h2>
+    </footer>
+</body>
+</html>

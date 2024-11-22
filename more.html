@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+		
+		/* Importing Google Font 'Reenie Beanie' */
+		@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+       
+        /* Styling for the entire body */
+        body {
+            background-color: #FFCCCB; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Styling for the header section */
+        header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Styling for the main heading */
+        h1 {
+            font-family: 'Reenie Beanie', cursive; 
+            font-size: 266px;
+            color:black;
+            margin: 0;
+            background-color: ;
+        }
+        
+        /* Styling for secondary headings */
+        h2 {
+            font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif';
+            font-size: 34px;
+            color: black ;
+            margin-top:10px;
+            background-color: ;
+        }
+        
+        /* Styling for the tertiary headings */
+        h3 {
+            font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif';
+            font-size: 34px;
+            color: ;
+            margin-top:10px;
+            background-color: green;
+        }
+
+        /* Styling for the main container */
+        .main-container {
+            background-color: #;
+            padding: 20px;
+            font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+        }
+
+        /* Styling for the column layout */
+        .column {
+            display: flex;
+            align-items: center;
+            gap: 20px; 
+        }
+
+        /* Styling for the images within the columns */
+        .column img {
+            width: 500px; 
+            height: auto;
+            margin-top: 20px;
+        }
+
+        /* Styling for headings and paragraphs within the columns */
+        .column h2,
+        .column p {
+            margin: 1;
+        }
+
+        /* Styling for the Italian header section */
+        .italian-header {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+
+        /* Styling for buttons */
+        .button {
+			font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'; /* Font family */
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        /* Styling for button hover effect */
+        .button:hover {
+            background-color: green;
+        }
+
+        /* Styling for button when clicked */
+        .button:active {
+            background-color: white;
+            color: black;
+        }
+
+        /* Media query for screens with a maximum width of 600px */
+        @media only screen and (max-width: 600px) {
+            .column {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .column img {
+                width: 100%;
+            }
+            h1 {
+                font-size: 72px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .button {
+                padding: 10px 20px;
+            }
+			
+        }
+
+        /* Media query for screens with a minimum width of 601px and maximum width of 1024px */
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* Add specific styles for this range if needed */
+        }
+
+        /* Media query for screens with a minimum width of 1025px */
+        @media only screen and (min-width: 1025px) {
+            /* Add specific styles for this range if needed */
+        }
+		/* Dropdown menu styles */
+        .dropdown {
+            position: relative; /* Relative positioning */
+            display: inline-block; /* Inline block display */
+        }
+  
+        .dropdown-content {
+			font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'; /* Font family */
+            display: none; /* Initially hidden */
+            position: absolute; /* Absolute positioning */
+            background-color: rgba(206,43,55,255); /* Background color */
+            min-width: 120px; /* Minimum width */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Box shadow */
+            z-index: 1; /* Z-index */
+            right: 5; /* Position to the right */
+            left: auto; /* Override any default left positioning */
+            color: white; /* Font color */
+       }
+  
+        .dropdown-content a {
+            color: white; /* Font color */
+            padding: 12px 16px; /* Padding */
+            text-decoration: none; /* No text decoration */
+            display: block; /* Block display */
+       }
+  
+        .dropdown-content a:hover {
+            background-color: green; /* Background color on hover */
+       }
+  
+        .dropdown:hover .dropdown-content {
+            display: block; /* Display on hover */
+       }
+		
+		h4 {
+			color: black; /* Font color */
+			font-size: 50px; /* Font size */
+			
+		}
+    </style>
+</head>
+	    
+<body>
+    <!-- Header section -->
+    <header class="italian-header">
+        <!-- Main heading -->
+        <h1>Venice</h1>
+        <!-- Dropdown menu -->
+        <div>
+            <h4 style="text-align: right;">
+                <!-- Dropdown container -->
+                <div class="dropdown">
+                    <!-- Menu icon -->
+                    <span>&#9776;</span>
+                    <!-- Dropdown content -->
+                    <div class="dropdown-content">
+                        <a href="home.html">Visit</a>
+						<a href="details.html">Eat</a>
+                        <a href="more.html">Stay</a>
+                    </div>
+                </div>
+            </h4>
+        </div>
+    </header>
+    
+    <!-- Navigation buttons -->
+	<button class="button"><a href="home.html">Places to Visit</a></button>
+    <button class="button"><a href="details.html">Places to Eat</a></button>
+    <button class="button"><a href="more.html">Places to Stay</a></button>
+
+    <!-- Section heading -->
+    <header>
+        <h3>Best Places to Stay</h3>
+    </header>
+    <div class="main-container">
+        <div class="column">
+            <img src="Images/Hotel Danieli.jpg" alt="Hotel Danieli">
+            <div>
+                <h2>Hotel Danieli</h2>
+                <p>Overlooking the iconic Grand Canal, Hotel Danieli exudes timeless luxury and Venetian charm. Housed within historic palaces dating back to the 14th century, this lavish accommodation boasts opulent decor, Michelin-starred dining options, and unparalleled views of Venice's landmarks. With its central location near St. Mark's Square, guests can easily explore the city's cultural treasures before retreating to their elegant rooms or suites.</p>
+            </div>
+        </div>
+        <div class="column">
+            <img src="Images/Belmont Hotel.jpg".jpg" alt="Belmond Hotel Cipriani">
+            <div>
+                <h2>Belmond Hotel Cipriani</h2>
+                <p>Situated on the tranquil island of Giudecca, Belmond Hotel Cipriani offers a secluded retreat from the bustling streets of Venice. Surrounded by lush gardens and overlooking the lagoon, this five-star oasis features luxurious accommodations, a private pool, and exquisite dining experiences. Guests can indulge in gourmet cuisine at the Michelin-starred Oro Restaurant or unwind with a cocktail at the iconic Cip's Club, all while enjoying panoramic views of the Venetian skyline.</p>
+            </div>
+        </div>
+        <div class="column">
+            <img src="Images\Sagredo Hotel.jpg" alt="Ca' Sagredo Hotel">
+            <div>
+                <h2>Ca' Sagredo Hotel</h2>
+                <p>Set within a meticulously restored 15th-century palace along the Grand Canal, Ca' Sagredo Hotel embodies Venetian elegance and heritage. Each room and suite is adorned with frescoed ceilings and antique furnishings, creating a romantic ambiance reminiscent of a bygone era. Guests can savor traditional Venetian cuisine at the hotel's elegant restaurant or admire priceless artworks displayed throughout the property. With its proximity to Rialto Bridge and other landmarks, Ca' Sagredo Hotel offers a quintessential Venetian experience.</p>
+            </div>
+        </div>
+        <div class="column">
+            <img src="Images/JW Marriot.jpg" alt="JW Marriott Venice Resort & Spa">
+            <div>
+                <h2>JW Marriott Venice Resort and Spa</h2>
+                <p>Located on its own private island in the Venetian Lagoon, JW Marriott Venice Resort and Spa offers a tranquil escape just a short boat ride away from the bustling city center. Surrounded by lush gardens and breathtaking views, this luxurious resort features spacious accommodations, world-class dining options, and a rejuvenating spa. Guests can unwind in style at the rooftop pool, explore the nearby islands, or take advantage of the resort's complimentary shuttle service to St. Mark's Square, making it an ideal base for experiencing the best of Venice.</p>
+            </div>
+        </div>
+    </div>
+    <footer style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg'); background-size: cover; color: white; padding: 20px; text-align: center;">
+    <h2>Enjoy Venice!</h2>
+</footer>
+</body>
+</html>
